@@ -8,7 +8,7 @@ namespace lootboxSimulator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Lootbox Simulator!");
+            Console.WriteLine("Welcome to Lootbox Simulator!\n");
             
             while (true)
             {

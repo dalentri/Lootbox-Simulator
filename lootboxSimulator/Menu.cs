@@ -5,6 +5,7 @@ public class Menu
     public static void DisplayMenu()
     {
         int choice;
+        Pouch Pouch = new Pouch();
         
         // Display menu
         Console.WriteLine("Menu:");
@@ -34,6 +35,7 @@ public class Menu
                 break;
             case 2:
                 Console.WriteLine("Viewing Pouch...");
+                Pouch.ViewPouch();
                 break;
             case 3:
                 Console.WriteLine("Dropping Items...");
