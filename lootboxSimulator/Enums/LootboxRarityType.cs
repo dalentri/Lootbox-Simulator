@@ -1,4 +1,4 @@
-namespace lootboxSimulator;
+namespace lootboxSimulator.Enums;
 
 public enum LootboxRarityType
 {

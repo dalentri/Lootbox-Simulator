@@ -2,10 +2,11 @@ namespace lootboxSimulator;
 
 public class Menu
 {
-    public static void DisplayMenu()
+    private Lootbox _lootbox = new Lootbox();
+    public static Pouch _pouch = new Pouch();
+    public void DisplayMenu()
     {
         int choice;
-        Pouch Pouch = new Pouch();
         
         // Display menu
         Console.WriteLine("Menu:");
@@ -31,17 +32,29 @@ public class Menu
         switch (userMenuChoice)
         {
             case 1:
-                Console.WriteLine("Opening Lootbox...");
+                Console.WriteLine("\nOpening Lootbox...");
+                _lootbox.OpenLootBox();
                 break;
             case 2:
-                Console.WriteLine("Viewing Pouch...");
-                Pouch.ViewPouch();
+                Console.WriteLine("\nViewing Pouch...");
+                Console.WriteLine("\nPouch Contents:");
+                Console.WriteLine("------------------------");
+                _pouch.ViewPouch(_pouch);
                 break;
             case 3:
-                Console.WriteLine("Dropping Items...");
-                break;
+                if (_pouch._pouchItems.Count == 0)
+                {
+                    Console.WriteLine("Pouch is empty!\n");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\nDropping Items...");
+                    _pouch.RemoveItem();
+                    break;
+                } 
             case 4:
-                Console.WriteLine("Thank you for rolling!");
+                Console.WriteLine("\nThank you for rolling!");
                 Environment.Exit(0);
                 break;
         }

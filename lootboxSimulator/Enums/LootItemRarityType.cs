@@ -1,14 +1,10 @@
-namespace lootboxSimulator;
-
-public class LootItemRarityType
+namespace lootboxSimulator.Enums;
+public enum LootRarityType
 {
-    public enum LootRarityType
-    {
-        Common,
-        Uncommon,
-        Rare,
-        Epic,
-        Legendary,
-        Mythic,
-    };
-}
+    Common,
+    Uncommon,
+    Rare,
+    Epic,
+    Legendary, 
+    Mythic,
+};
